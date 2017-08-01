@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="SMICKLEWORTHY">
+<head>
+    <title></title>
+</head>
+<body ng-controller="REEBCONTROLLER">
+
+    First Name: <input ng-model='firstName'/>
+    Last Name: <input ng-model='lastName'/>
+
+    <hr/>
+
+    <ul>
+        <li ng-repeat='character in characters'>
+            <a ng-click='removeCharacter(character)'>{{character}}</a>
+        </li>
+    </ul>
+
+    <hr/>
+
+    <form ng-submit='addCharacter()'>
+        <input type='text' ng-model='newCharacter'/>
+        <input type='submit' value='Add Character'/>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type='text/javascript' src='controller.js'></script>
+
+</body>
+</html>
